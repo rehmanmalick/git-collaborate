@@ -3,23 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Simple Webpage</title>
+  <title>Advanced Webpage</title>
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
   <header>
-    <h1>My Simple Webpage</h1>
+    <nav>
+      <h1 class="logo">MySite</h1>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-    <p>Welcome to this basic HTML/CSS/JS webpage!</p>
-    <button id="alertBtn">Click Me</button>
+    <section class="hero">
+      <h2>Welcome to My Advanced Webpage</h2>
+      <p>This page uses HTML, CSS, and JavaScript to demonstrate more advanced features.</p>
+      <button id="openModal">Subscribe</button>
+    </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 My Website</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h3>Subscribe to Newsletter</h3>
+      <form id="subscribeForm">
+        <input type="email" id="email" placeholder="Enter your email" required />
+        <button type="submit">Sub
