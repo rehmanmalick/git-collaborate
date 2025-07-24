@@ -116,28 +116,4 @@ button:hover {
 #formResponse {
   margin-top: 0.5rem;
   font-size: 0.9rem;
-  color: red;
-  text-align: center;
-}
-
-/* Footer */
-footer {
-  background: #222;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: auto;
-}
-
-/* Responsive Nav */
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    background: #333;
-    width: 100%;
-    display: none;
-  }
-  .nav-links.active {
-    display: flex;
-  }
 }
