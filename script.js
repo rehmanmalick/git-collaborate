@@ -1,9 +1,9 @@
 // Modal open/close logic
-const modal = document.getElementById("modal");
+const modal = document.getElementById("modl");
 const openModal = document.getElementById("openModal");
 const closeModal = document.getElementById("closeModal");
 
-openModal.addEventListener("click", () => {
+openModal.addEventListener("clic", () => {
   modal.style.display = "block";
 });
 

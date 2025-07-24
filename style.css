@@ -1,134 +1,143 @@
+/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #f0f2f5;
+  line-height: 1.6;
+  background: #f9f9f9;
   color: #333;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+}
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
 }
 
-header {
-  background-color: #222;
+/* Navbar */
+.navbar {
+  background: #222;
   color: white;
-  padding: 1rem 2rem;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
+.navbar .logo {
   font-size: 1.5rem;
+  font-weight: bold;
 }
-
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
-
 .nav-links a {
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
-
-main {
-  flex: 1;
+.navbar .container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 2rem;
 }
 
+/* Hero */
 .hero {
+  background: linear-gradient(to right, #0077cc, #00c6ff);
+  color: white;
+  padding: 4rem 0;
   text-align: center;
 }
-
-.hero button {
+.hero .btn {
+  display: inline-block;
   margin-top: 1rem;
-  padding: 10px 20px;
-  background-color: #0077cc;
-  color: white;
-  border: none;
+  padding: 0.7rem 1.5rem;
+  background: white;
+  color: #0077cc;
   border-radius: 5px;
-  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.hero button:hover {
-  background-color: #005fa3;
+/* Sections */
+section {
+  padding: 4rem 0;
 }
-
-footer {
-  background-color: #222;
-  color: white;
+.about p, .services p {
+  max-width: 600px;
+  margin: 0 auto;
   text-align: center;
-  padding: 1rem;
 }
 
-/* Modal styles */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.5);
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
-
-.modal-content {
-  background-color: white;
-  margin: 10% auto;
+.card {
+  background: white;
   padding: 2rem;
   border-radius: 10px;
-  width: 90%;
-  max-width: 400px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   text-align: center;
-  position: relative;
 }
 
-.close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 24px;
-  cursor: pointer;
+/* Contact */
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
-
-input[type="email"] {
-  padding: 10px;
-  width: 80%;
-  margin-top: 1rem;
+input, textarea {
+  padding: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-
-button[type="submit"] {
-  margin-top: 1rem;
-  padding: 10px 20px;
-  background-color: #28a745;
+button {
+  padding: 0.7rem;
+  background: #28a745;
   color: white;
   border: none;
+  font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
 }
-
-button[type="submit"]:hover {
-  background-color: #218838;
+button:hover {
+  background: #218838;
+}
+#formResponse {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: red;
+  text-align: center;
 }
 
-#formMessage {
-  margin-top: 10px;
-  font-size: 0.9rem;
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+/* Responsive Nav */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    background: #333;
+    width: 100%;
+    display: none;
+  }
+  .nav-links.active {
+    display: active;
+  }
 }
