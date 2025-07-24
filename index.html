@@ -3,33 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Advanced Webpage</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <title>Advanced Landing Page</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <nav>
-      <h1 class="logo">MySite</h1>
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Features</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+    <nav class="navbar">
+      <div class="container">
+        <h1 class="logo">MyBrand</h1>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <h2>Welcome to My Advanced Webpage</h2>
-      <p>This page uses HTML, CSS, and JavaScript to demonstrate more advanced features.</p>
-      <button id="openModal">Subscribe</button>
-    </section>
-  </main>
+  <section class="hero" id="home">
+    <div class="container">
+      <h2>Your Modern Web Presence</h2>
+      <p>We create responsive and elegant solutions for your business.</p>
+      <a href="#contact" class="btn">Get In Touch</a>
+    </div>
+  </section>
 
-  <div class="modal" id="modal">
-    <div class="modal-content">
-      <span class="close" id="closeModal">&times;</span>
-      <h3>Subscribe to Newsletter</h3>
-      <form id="subscribeForm">
-        <input type="email" id="email" placeholder="Enter your email" required />
-        <button type="submit">Sub
+  <section class="about" id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>We are a web development agency that crafts user-centric, clean, and high-performance websites and web apps.</p>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Design</h3>
+          <p>Beautiful and functional UI/UX design for your product.</p>
+        </div>
+        <div class="card">
+          <h3>Development</h3>
+          <p>Custom web apps and websites using modern technologies.</p>
+        </div>
+        <div class="card">
+          <h3>Consulting</h3>
+          <p>Expert advice to help grow and scale your business online.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+        <p id="formResponse"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MyBrand. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
