@@ -5,10 +5,10 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
   const message = document.getElementById("message").value.trim();
-  const response = document.getElementById("formResponse");
+  const response = document.getElementById("work");
 
   if (!name || !email || !message) {
-    response.textContent = "All fields are required.";
+    response.textContent = "All are good to go ";
     response.style.color = "red";
     return;
   }
