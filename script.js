@@ -1,4 +1,4 @@
-let name = "Hassan", age = 20;
+let name = "Hassan", age = 21;
 
 function changeGreeting() {
   document.getElementById("greeting").innerText = 
